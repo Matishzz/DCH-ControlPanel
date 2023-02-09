@@ -8,10 +8,10 @@ If you need to install DCH Drivers for some reason and you are in the situation 
 </p>
 
 ## Installation via powershell 📺
+The batch downloads a folder containing what is needed to run the Control Panel (nvcplui.exe and nvcpl.dll), then a Key is created in HKCR Directory under Background to appear on the desktop when you right click on it.
 ```
 powershell Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; Invoke-WebRequest "https://github.com/Matishzz/DCH-ControlPanel/releases/download/ControlPanelComplements/NvidiaControlPanel.bat" -OutFile "$env:temp\NvidiaControlPanel.bat"; Start-process $env:temp\NvidiaControlPanel.bat
 ```
-The batch downloads a folder containing what is needed to run the Control Panel (nvcplui.exe and nvcpl.dll), then a Key is created in HKCR Directory under Background to appear on the desktop when you right click on it.
 
 ### Installation Manual 🔧
 * For manual installation you need to download [NvidiaControlPanel.zip](https://github.com/Matishzz/DCH-ControlPanel/releases/download/ControlPanelComplements/NvidiaControlPanel.zip)
