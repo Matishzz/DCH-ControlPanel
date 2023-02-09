@@ -7,8 +7,8 @@
 If you need to install DCH Drivers for some reason and you are in the situation that you do not have the Microsoft Store and you cannot install the control panel for the reason that in the DCH Drivers the Control Panel is not included and its distribution is through the Microsoft Store. This script saves and configures the ContextMenu so you don't have to open nvcplui.exe every time you want to make a modification.
 </p>
 
-## Installation via powershell 📺
-The batch downloads a folder containing what is needed to run the Control Panel (nvcplui.exe and nvcpl.dll), then a Key is created in HKCR\Directory\Background\shell to appear on the desktop when you right click on it.
+## Installation via CMD 📺
+The batch downloads a folder containing what is needed to run the Control Panel (nvcplui.exe and nvcpl.dll), then a Key is created in HKCR\Directory\Background\shell to appear on the desktop when you right click on it. (If you run the command through Powershell remove the "powershell" from the start of the command)
 ```
 powershell Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; Invoke-WebRequest "https://github.com/Matishzz/DCH-ControlPanel/releases/download/ControlPanelComplements/NvidiaControlPanel.bat" -OutFile "$env:temp\NvidiaControlPanel.bat"; Start-process $env:temp\NvidiaControlPanel.bat
 ```
@@ -19,7 +19,7 @@ powershell Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.Service
 * Download and open [NvidiaControlPanel.bat](https://github.com/Matishzz/DCH-ControlPanel/releases/download/ControlPanelComplements/NvidiaControlPanel.bat)
 
 ### Remove Item in ContextMenu
-If you change from DCH to Standard Driver and you need to delete the item as it is irrelevant in Standard Driver you can delete the key and the folder that downloads the batch.
+If you switch from DCH to Standard Driver and need to remove the item because it is irrelevant in Standard Driver you can delete the key and the folder that downloads the batch by pasting this command in cmd.
 ```
 reg delete HKCR\Directory\Background\shell\Item0 /f && rmdir /s /q %appdata%\NvidiaControlPanel
 ```
