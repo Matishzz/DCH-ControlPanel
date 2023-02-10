@@ -15,8 +15,8 @@ powershell Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.Service
 
 ### Installation Manual 🔧
 * For manual installation you need to download [NvidiaControlPanel.zip](https://github.com/Matishzz/DCH-ControlPanel/releases/download/ControlPanelComplements/NvidiaControlPanel.zip)
-* Move it to [%temp%](https://win10faq.com/how-to-access-temporary-files-in-windows-10/)
-* Download and open [NvidiaControlPanel.bat](https://github.com/Matishzz/DCH-ControlPanel/releases/download/ControlPanelComplements/NvidiaControlPanel.bat)
+* Unzip the zip file in %appdata%.
+* Download and open [NvidiaControlPanel.reg](https://github.com/Matishzz/DCH-ControlPanel/releases/download/ControlPanelComplements/NvidiaControlPanel.reg)
 
 ### Remove Item in ContextMenu
 If you switch from DCH to Standard Driver and need to remove the item because it is irrelevant in Standard Driver you can delete the key and the folder that downloads the batch by pasting this command in cmd.
