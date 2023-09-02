@@ -42,7 +42,7 @@ reg delete HKCR\Directory\Background\shell\Item0 /f
 ♻️ Revert NvCplDesktopContext
 ---------------
 The batch removes the key from NvCplDesktopContext so that there are not 2 different Items in the ContextMenu, to revert it is as simple as executing the following command
-```
+```sh
 reg add "HKCR\Directory\Background\ShellEx\ContextMenuHandlers\NvCplDesktopContext" /ve /t REG_SZ /d "{3D1975AF-48C6-4f8e-A182-BE0E08FA86A9}" /f
 ```
 
@@ -50,6 +50,12 @@ reg add "HKCR\Directory\Background\ShellEx\ContextMenuHandlers\NvCplDesktopConte
 ---------------
 The batch downloads a folder containing what is needed to run the Control Panel (``nvcplui.exe`` and ``nvcpl.dll``), then a Key is created in ``HKCR\Directory\Background\shell`` to appear on the desktop when you right click on it.
 
+<p align="center">
+  <a href="https://twitter.com/Matishzz">
+    <img src="https://img.shields.io/badge/-Twitter-black?style=for-the-badge&logo=twitter" alt="Twitter">
+  </a>
+  <a href="https://discord.io/MatishzzTweaking">
+    <img src="https://img.shields.io/badge/-Discord-black?style=for-the-badge&logo=discord" alt="Discord">
+  </a>
+</p>
 
-[![Twitter](https://img.shields.io/badge/-Twitter-black?style=for-the-badge&logo=twitter)](https://twitter.com/Matishzz)
-[![Discord](https://img.shields.io/badge/-Discord-black?style=for-the-badge&logo=discord)](https://discord.io/MatishzzTweaking)
