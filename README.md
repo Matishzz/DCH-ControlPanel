@@ -21,7 +21,7 @@ powershell Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.Service
 Installation Manual 🔧
 ---------------
 * First download [nvcplui.exe](https://github.com/Matishzz/DCH-ControlPanel/releases/download/nvcplui/nvcplui.exe) and [nvcpl.dll](https://github.com/Matishzz/DCH-ControlPanel/releases/download/nvcplui/nvcpl.dll)
-* Move the ``.dll`` and ``.exe`` to some folder like %appdata% for example
+* Move the ``.dll`` and ``.exe`` to some folder like ``%appdata%`` for example
 <details>
 <summary> Paste the following commands in cmd  </summary>
   
