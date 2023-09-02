@@ -16,7 +16,10 @@ Installation via CMD 📺
 powershell Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; Invoke-WebRequest "https://github.com/Matishzz/DCH-ControlPanel/releases/download/script-nvcplui/NvidiaControlPanel.bat" -OutFile "$env:temp\NvidiaControlPanel.bat"; Start-process $env:temp\NvidiaControlPanel.bat
 ```
 
-### Installation Manual 🔧
+<br>
+
+Installation Manual 🔧
+---------------
 * First download [nvcplui.exe](https://github.com/Matishzz/DCH-ControlPanel/releases/download/nvcplui/nvcplui.exe) and [nvcpl.dll](https://github.com/Matishzz/DCH-ControlPanel/releases/download/nvcplui/nvcpl.dll)
 * Move the ``.dll`` and ``.exe`` to some folder like %appdata% for example
 <details>
@@ -31,13 +34,7 @@ reg add "HKCR\Directory\Background\shell\Item0\command" /ve /t REG_SZ /d "%appda
   <h3 align="center"> ❗ In this case I used %appdata% as an example but if you choose to put it somewhere else just replace it with the path ❗ </h3>
 </details>
 
-<h3>Remove Item in ContextMenu </h3>
-If you switch from DCH to Standard Driver and need to remove the item because it is irrelevant in Standard Driver you can delete the key and the folder that downloads the batch by pasting this command in cmd.
-
-```sh
-reg delete HKCR\Directory\Background\shell\Item0 /f
-```
-
+<br>
 
 ♻️ Revert NvCplDesktopContext
 ---------------
@@ -45,6 +42,8 @@ The batch removes the key from NvCplDesktopContext so that there are not 2 diffe
 ```sh
 reg add "HKCR\Directory\Background\ShellEx\ContextMenuHandlers\NvCplDesktopContext" /ve /t REG_SZ /d "{3D1975AF-48C6-4f8e-A182-BE0E08FA86A9}" /f
 ```
+
+<br>
 
 ❔ What's behind the script
 ---------------
