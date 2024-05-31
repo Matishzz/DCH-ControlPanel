@@ -25,7 +25,7 @@ Installation Manual 🔧
 reg delete "HKEY_CLASSES_ROOT\Directory\Background\ShellEx\ContextMenuHandlers\NvCplDesktopContext" /f && reg add "HKCR\Directory\Background\shell\Item0" /v "MUIVerb" /t REG_SZ /d "NVIDIA Control Panel" /f && reg add "HKCR\Directory\Background\shell\Item0" /v "Icon" /t REG_SZ /d "%appdata%\nvcpl.dll,0" /f &&  reg add "HKCR\Directory\Background\shell\Item0\command" /ve /t REG_SZ /d "%appdata%\nvcplui.exe" /f
 ```
 
-  <h3 align="center"> ❗ In this case I used %appdata% as an example but if you choose to put it somewhere else just replace it with the path ❗ </h3>
+  <h4 align="center"> ❗ In this case I used %appdata% as an example but if you choose to put it somewhere else just replace it with the path ❗ </h4>
 </details>
 
 
