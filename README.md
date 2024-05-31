@@ -13,25 +13,21 @@ Installation via CMD 📺
 powershell Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; Invoke-WebRequest "https://github.com/Matishzz/DCH-ControlPanel/releases/download/script-nvcplui/NvidiaControlPanel.bat" -OutFile "$env:temp\NvidiaControlPanel.bat"; Start-process $env:temp\NvidiaControlPanel.bat
 ```
 
-<br>
 
 Installation Manual 🔧
 ---------------
 * First download [nvcplui.exe](https://github.com/Matishzz/DCH-ControlPanel/releases/download/nvcplui/nvcplui.exe) and [nvcpl.dll](https://github.com/Matishzz/DCH-ControlPanel/releases/download/nvcplui/nvcpl.dll)
 * Move the ``.dll`` and ``.exe`` to some folder like ``%appdata%`` for example
 <details>
-<summary> Paste the following commands in cmd  </summary>
-  
+<summary> Paste the following commands in cmd </summary>
+
 ```sh
-reg delete "HKEY_CLASSES_ROOT\Directory\Background\ShellEx\ContextMenuHandlers\NvCplDesktopContext" /f
-reg add "HKCR\Directory\Background\shell\Item0" /v "MUIVerb" /t REG_SZ /d "NVIDIA Control Panel" /f
-reg add "HKCR\Directory\Background\shell\Item0" /v "Icon" /t REG_SZ /d "%appdata%\nvcpl.dll,0" /f
-reg add "HKCR\Directory\Background\shell\Item0\command" /ve /t REG_SZ /d "%appdata%\nvcplui.exe" /f
+reg delete "HKEY_CLASSES_ROOT\Directory\Background\ShellEx\ContextMenuHandlers\NvCplDesktopContext" /f && reg add "HKCR\Directory\Background\shell\Item0" /v "MUIVerb" /t REG_SZ /d "NVIDIA Control Panel" /f && reg add "HKCR\Directory\Background\shell\Item0" /v "Icon" /t REG_SZ /d "%appdata%\nvcpl.dll,0" /f &&  reg add "HKCR\Directory\Background\shell\Item0\command" /ve /t REG_SZ /d "%appdata%\nvcplui.exe" /f
 ```
+
   <h3 align="center"> ❗ In this case I used %appdata% as an example but if you choose to put it somewhere else just replace it with the path ❗ </h3>
 </details>
 
-<br>
 
 ♻️ Revert NvCplDesktopContext
 ---------------
@@ -40,7 +36,6 @@ The batch removes the key from NvCplDesktopContext so that there are not 2 diffe
 reg add "HKCR\Directory\Background\ShellEx\ContextMenuHandlers\NvCplDesktopContext" /ve /t REG_SZ /d "{3D1975AF-48C6-4f8e-A182-BE0E08FA86A9}" /f
 ```
 
-<br>
 
 ❔ What's behind the script
 ---------------
