@@ -1,10 +1,7 @@
 <p align="center">
 
   <img src="https://nvidia.wd5.myworkdayjobs.com/wday/cxs/nvidia/NVIDIAExternalCareerSite/sidebarimage/e64d788b7b8d01e4c34e99996322ec00" height="200">
-  <h3 align="center">Installing Nvidia Control Panel without UWP</h3>
-</p>
 
-<br>
 
 <p align="center">
 If you need to install DCH Drivers for some reason and you are in the situation that you do not have the Microsoft Store and you cannot install the control panel for the reason that in the DCH Drivers the Control Panel is not included and its distribution is through the Microsoft Store. This script saves and configures the ContextMenu so you don't have to open nvcplui.exe every time you want to make a modification.
