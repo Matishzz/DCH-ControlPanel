@@ -28,7 +28,7 @@ reg delete "HKEY_CLASSES_ROOT\Directory\Background\ShellEx\ContextMenuHandlers\N
 
 <br>
 
-♻️ Revert NvCplDesktopContext
+Revert NvCplDesktopContext ♻️
 ---------------
 The batch removes the key from NvCplDesktopContext so that there are not 2 different Items in the ContextMenu, to revert it is as simple as executing the following command
 ```sh
