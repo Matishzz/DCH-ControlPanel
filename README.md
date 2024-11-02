@@ -37,10 +37,6 @@ reg add "HKCR\Directory\Background\ShellEx\ContextMenuHandlers\NvCplDesktopConte
 
 <br>
 
-❔ What's behind the script
----------------
-The batch downloads a folder containing what is needed to run the Control Panel (``nvcplui.exe`` and ``nvcpl.dll``), then a Key is created in ``HKCR\Directory\Background\shell`` to appear on the desktop when you right click on it.
-
 <p align="center">
   <a href="https://twitter.com/Matishzz">
     <img src="https://img.shields.io/badge/-Twitter-black?style=for-the-badge&logo=twitter" alt="Twitter">
