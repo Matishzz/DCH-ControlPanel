@@ -7,15 +7,7 @@
 If you need to install DCH Drivers for some reason and you are in the situation that you do not have the Microsoft Store and you cannot install the control panel for the reason that in the DCH Drivers the Control Panel is not included and its distribution is through the Microsoft Store. This script saves and configures the ContextMenu so you don't have to open nvcplui.exe every time you want to make a modification.
 </p>
 
-Installation via CMD 📺
----------------
-```ruby
-powershell Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; Invoke-WebRequest "https://github.com/Matishzz/DCH-ControlPanel/releases/download/script-nvcplui/NvidiaControlPanel.bat" -OutFile "$env:temp\NvidiaControlPanel.bat"; Start-process $env:temp\NvidiaControlPanel.bat
-```
-
-<br>
-
-Installation Manual 🔧
+Installation 🔧
 ---------------
 * First download [nvcplui.exe](https://github.com/Matishzz/DCH-ControlPanel/releases/download/nvcplui/nvcplui.exe) and [nvcpl.dll](https://github.com/Matishzz/DCH-ControlPanel/releases/download/nvcplui/nvcpl.dll)
 * Move the ``.dll`` and ``.exe`` to some folder like ``%appdata%`` for example
@@ -24,7 +16,6 @@ Paste the following commands in cmd
 ```sh
 reg delete "HKEY_CLASSES_ROOT\Directory\Background\ShellEx\ContextMenuHandlers\NvCplDesktopContext" /f && reg add "HKCR\Directory\Background\shell\Item0" /v "MUIVerb" /t REG_SZ /d "NVIDIA Control Panel" /f && reg add "HKCR\Directory\Background\shell\Item0" /v "Icon" /t REG_SZ /d "%appdata%\nvcpl.dll,0" /f &&  reg add "HKCR\Directory\Background\shell\Item0\command" /ve /t REG_SZ /d "%appdata%\nvcplui.exe" /f
 ```
-<br>
 
 Revert NvCplDesktopContext ♻️
 ---------------
